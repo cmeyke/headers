@@ -19,4 +19,5 @@ fn main() {
     let mut ctx: ClipboardContext = ClipboardProvider::new().unwrap();
 
     ctx.set_contents(output).unwrap(); // Copy the header to clipboard.
+    let _ = ctx.get_contents(); // Read the header from clipboard, neccessary to prevent the program from exiting immediately.
 }
